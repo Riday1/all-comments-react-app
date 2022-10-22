@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Comments.css'
+import Comment from '../Comment/Comment';
 
 const Comments = () => {
     const [comments, setComments] = useState([]);
@@ -11,6 +12,12 @@ const Comments = () => {
     return (
         <div>
             <h1>Total Comments : {comments.length}</h1>
+            {
+                comments.map(comment => <Comment
+                    email={comment.email}
+                    body={comment.body}
+                ></Comment>)
+            }
         </div>
     );
 };
