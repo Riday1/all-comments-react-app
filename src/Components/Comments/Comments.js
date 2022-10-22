@@ -14,8 +14,7 @@ const Comments = () => {
             <h1>Total Comments : {comments.length}</h1>
             {
                 comments.map(comment => <Comment
-                    email={comment.email}
-                    body={comment.body}
+                    comment={comment}
                 ></Comment>)
             }
         </div>
